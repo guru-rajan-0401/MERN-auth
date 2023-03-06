@@ -56,14 +56,14 @@ function Login() {
         <h1>
           <FaSignInAlt /> Login
         </h1>
-        <p>Login and start setting goals</p>
+        <p>Login and Get Started</p>
       </section>
 
       <section className="form">
         <form onSubmit={onSubmit}>
           <div className="form-group">
             <input
-              type="employeeId"
+              type="Number"
               className="form-control"
               id="employeeId"
               name="employeeId"

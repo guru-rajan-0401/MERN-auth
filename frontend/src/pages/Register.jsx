@@ -59,13 +59,14 @@ function Register() {
   );
 
   useEffect(() => {
-    if (isError) {
-      toast.error(message);
-    }
-    if (isSuccess || user) {
-      navigate("/");
+     if (isSuccess || user) {
+      navigate('/');
     }
 
+    if (isError) {
+       toast.error(message);
+    }
+   
     dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
@@ -209,7 +210,7 @@ function Register() {
           </div>
           <div className="form-group">
             <input
-              type="NUmber"
+              type="Number"
               className="form-control"
               id="aadharNumber"
               name="aadharNumber"

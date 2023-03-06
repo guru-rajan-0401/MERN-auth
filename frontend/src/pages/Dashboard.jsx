@@ -1,7 +1,10 @@
 import React from "react";
 
+
 function Dashboard() {
-  return <div>Dashboard</div>;
+  const name=
+  typeof window != 'undefined' && localStorage.getItem('name');
+  return   <div>`Welcome  to the dashboard page {name}`</div>;
 }
 
 export default Dashboard;

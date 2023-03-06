@@ -99,7 +99,8 @@ const registerUser = asyncHandler(async (req, res) => {
     if (emp) {
       res.status(201).json({
         message: "Employee created",
-        _id: emp.id,
+        _id:employeeId,
+        name:firstName,
         token: generateToken(emp._id),
       });
     } else {
@@ -124,6 +125,8 @@ const loginUser = asyncHandler(async (req, res) => {
     if (employeeId && (await bcrypt.compare(password, employee.password))) {
       res.json({
         message: "Login successful",
+        _id:employeeId,
+        name:employee.firstName,
         token: generateToken(employee._id),
       });
     } else {
